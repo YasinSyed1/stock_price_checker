@@ -17,44 +17,46 @@
     <header>
       <h1>ISQA_5 - Nasdaq Stock Price Checker</h1>
     </header>
-    <div id="userstories">
-      <h3>Example usage:</h3>
-      <code>/api/stock-prices?stock=GOOG</code>
-      <br />
-      <code>/api/stock-prices?stock=GOOG&amp;like=true</code>
-      <br />
-      <code>/api/stock-prices?stock=GOOG&amp;stock=MSFT</code>
-      <br />
-      <code>/api/stock-prices?stock=GOOG&amp;stock=MSFT&amp;like=true</code>
-      <br />
-      <h3>Example return:</h3>
-      <code>{"stockData":{"stock":"GOOG","price":786.90,"likes":1}}</code>
-      <br />
-      <code>
-        {"stockData":[{"stock":"MSFT","price":62.30,"rel_likes":-1},{"stock":"GOOG","price":786.90,"rel_likes":1}]}
-      </code>
-    </div>
-    <hr class="p-50" />
-    <div id="testui">
-      <h2 class="text-align-left">Front-End:</h2>
-      <h3>Get single price and total likes</h3>
-      <form id="testForm2" class="border">
-        <input type="text" name="stock" placeholder="GOOG" required="" />
-        <input type="checkbox" name="like" value="true" /> Like?
+    <div class="container">
+      <div id="userstories">
+        <h3>Example Usage:</h3>
+        <code>/api/stock-prices?stock=GOOG</code>
         <br />
-        <button type="submit">Get Price!</button>
-      </form>
-      <h3>Compare and get relative likes</h3>
-      <form id="testForm" class="border">
-        <input type="text" name="stock" placeholder="GOOG" required="" />
-        <input type="text" name="stock" placeholder="MSFT" required="" />
-        <input type="checkbox" name="like" value="true" /> Like both?
+        <code>/api/stock-prices?stock=GOOG&amp;like=true</code>
         <br />
-        <button type="submit">Get Price!</button>
-      </form>
-      <code id="jsonResult"></code>
+        <code>/api/stock-prices?stock=GOOG&amp;stock=MSFT</code>
+        <br />
+        <code>/api/stock-prices?stock=GOOG&amp;stock=MSFT&amp;like=true</code>
+        <br />
+        <h3>Example Return:</h3>
+        <code>{"stockData":{"stock":"GOOG","price":786.90,"likes":1}}</code>
+        <br />
+        <code>
+          {"stockData":[{"stock":"MSFT","price":62.30,"rel_likes":-1},{"stock":"GOOG","price":786.90,"rel_likes":1}]}
+        </code>
+      </div>
+      <hr />
+      <div id="testui">
+        <h2 class="text-align-left">Front-End:</h2>
+        <h3>Get Single Price and Total Likes</h3>
+        <form id="testForm2" class="border">
+          <input type="text" name="stock" placeholder="Enter stock symbol (e.g., GOOG)" required="" />
+          <input type="checkbox" name="like" value="true" /> Like?
+          <br />
+          <button type="submit" class="f-btn">Get Price</button>
+        </form>
+        <h3>Compare and Get Relative Likes</h3>
+        <form id="testForm" class="border">
+          <input type="text" name="stock" placeholder="Enter first stock symbol" required="" />
+          <input type="text" name="stock" placeholder="Enter second stock symbol" required="" />
+          <input type="checkbox" name="like" value="true" /> Like both?
+          <br />
+          <button type="submit" class="f-btn">Get Price</button>
+        </form>
+        <code id="jsonResult"></code>
+      </div>
     </div>
-    <hr class="m-50 mt-200" />
+    <hr />
     <script src="/public/script.js"></script>
   </body>
 </html>
